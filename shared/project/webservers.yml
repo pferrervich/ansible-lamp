@@ -3,5 +3,5 @@
   hosts: webservers
   roles:
     - role: apache
-    # - role: php
+    - role: php
     # - role: wordpress

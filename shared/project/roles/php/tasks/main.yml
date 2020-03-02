@@ -1,0 +1,5 @@
+---
+- name: Install PHP packages
+  apt: name={{ item }} state=present
+  with_items: "{{ php_packages }}"
+  notify: restart apache2
