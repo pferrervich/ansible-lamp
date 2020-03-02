@@ -1,0 +1,4 @@
+---
+- name: Ensure Apache is installed
+  apt: name={{ item }} state=present
+  with_items: "{{ apache_packages }}"
