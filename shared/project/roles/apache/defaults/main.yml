@@ -5,3 +5,26 @@ apache_packages:
 
 apache_mods_enabled:
   - rewrite.load
+
+# Ubuntu 16.04 config
+apache_daemon: apache2
+apache_daemon_path: /usr/sbin/
+apache_server_root: /etc/apache2
+apache_conf_path: /etc/apache2
+
+# Configurations
+apache_vhosts_filename: "vhosts.conf"
+apache_vhosts_template: "vhosts.conf.j2"
+
+apache_listen_ip: "*"
+apache_listen_port: 80
+
+apache_global_vhost_settings: |
+  DirectoryIndex index.php index.html
+
+apache_vhosts:
+  - servername: "pf.com"
+    documentroot: "{{ webserver_root }}"
+
+apache_allow_override: "All"
+apache_options: "-Indexes +FollowSymLinks"
