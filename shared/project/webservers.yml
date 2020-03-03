@@ -4,4 +4,4 @@
   roles:
     - role: apache
     - role: php
-    # - role: wordpress
+    - role: wordpress
